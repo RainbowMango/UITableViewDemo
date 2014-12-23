@@ -11,11 +11,7 @@ import UIKit
 class FoldTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    // table view 数据
-    var tableViewData: Dictionary<String, [String]> = ["Section01": ["Section01-01", "Section01-02", "Section01-03", "Section01-04"],
-                                                       "Section02": ["Section02-01", "Section02-02", "Section02-03", "Section02-04"],
-                                                       "Section03": ["Section03-01", "Section03-02", "Section03-03", "Section03-04"]]
+    @IBOutlet weak var tableHeaderView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,65 +23,33 @@ class FoldTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     func setTableView() {
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "commonCell")
+        self.tableView.registerClass(PrimeCategoryTableViewCell.self, forCellReuseIdentifier: "PrimeCategoryTableViewCell")
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
     
     // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4;
+        return 10;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("commonCell") as UITableViewCell
-        switch indexPath.section{
-        case 0:
-            cell.textLabel.text = "hello"
-        case 1:
-            cell.textLabel.text = "hello"
-        case 2:
-            cell.textLabel.text = "hello"
-        default:
-            println("No such section")
-        }
+        var cell = tableView.dequeueReusableCellWithIdentifier("PrimeCategoryTableViewCell") as PrimeCategoryTableViewCell
         
         return cell
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section{
-        case 0:
-            return "Section01"
-        case 1:
-            return "Section02"
-        case 2:
-            return "Section03"
-        default:
-            return "Unkonwn Section"
-        }
-    }
-    
-    func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        switch section{
-        case 0:
-            return "Section01 Footer"
-        case 1:
-            return "Section02 Footer"
-        case 2:
-            return "Section03 Footer"
-        default:
-            return "Unkonwn Section Footer"
-        }
-    }
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     // MARK: - UITableViewDelegate
-//    // 定义SectionHeader
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        return UIView()
-//    }
+    // 定义SectionHeader
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return self.tableHeaderView
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("点击了section: \(indexPath.section)")
+    }
 }

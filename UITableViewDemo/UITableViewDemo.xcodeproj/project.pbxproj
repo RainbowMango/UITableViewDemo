@@ -15,6 +15,7 @@
 		9B7B51A51A48428D0027FDAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7B51A31A48428D0027FDAC /* LaunchScreen.xib */; };
 		9B7B51B11A48428D0027FDAC /* UITableViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B51B01A48428D0027FDAC /* UITableViewDemoTests.swift */; };
 		9B7B51BD1A48527D0027FDAC /* FoldTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B51BC1A48527D0027FDAC /* FoldTableViewController.swift */; };
+		9B7B51BF1A4992710027FDAC /* PrimeCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B51BE1A4992710027FDAC /* PrimeCategoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		9B7B51AF1A48428D0027FDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B7B51B01A48428D0027FDAC /* UITableViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewDemoTests.swift; sourceTree = "<group>"; };
 		9B7B51BC1A48527D0027FDAC /* FoldTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldTableViewController.swift; sourceTree = "<group>"; };
+		9B7B51BE1A4992710027FDAC /* PrimeCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeCategoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				9B7B519C1A48428D0027FDAC /* ViewController.swift */,
 				9B7B519E1A48428D0027FDAC /* Main.storyboard */,
 				9B7B51BC1A48527D0027FDAC /* FoldTableViewController.swift */,
+				9B7B51BE1A4992710027FDAC /* PrimeCategoryTableViewCell.swift */,
 				9B7B51A11A48428D0027FDAC /* Images.xcassets */,
 				9B7B51A31A48428D0027FDAC /* LaunchScreen.xib */,
 				9B7B51991A48428D0027FDAC /* UITableViewDemo.xcdatamodeld */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7B51BF1A4992710027FDAC /* PrimeCategoryTableViewCell.swift in Sources */,
 				9B7B51BD1A48527D0027FDAC /* FoldTableViewController.swift in Sources */,
 				9B7B519D1A48428D0027FDAC /* ViewController.swift in Sources */,
 				9B7B519B1A48428D0027FDAC /* UITableViewDemo.xcdatamodeld in Sources */,
