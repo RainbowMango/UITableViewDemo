@@ -16,6 +16,7 @@
 		9B7B51B11A48428D0027FDAC /* UITableViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B51B01A48428D0027FDAC /* UITableViewDemoTests.swift */; };
 		9B7B51BD1A48527D0027FDAC /* FoldTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B51BC1A48527D0027FDAC /* FoldTableViewController.swift */; };
 		9B7B51BF1A4992710027FDAC /* PrimeCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B51BE1A4992710027FDAC /* PrimeCategoryTableViewCell.swift */; };
+		9B8D81461A4AF0FD00B58F53 /* MinorCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D81451A4AF0FD00B58F53 /* MinorCategoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		9B7B51B01A48428D0027FDAC /* UITableViewDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewDemoTests.swift; sourceTree = "<group>"; };
 		9B7B51BC1A48527D0027FDAC /* FoldTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldTableViewController.swift; sourceTree = "<group>"; };
 		9B7B51BE1A4992710027FDAC /* PrimeCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		9B8D81451A4AF0FD00B58F53 /* MinorCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinorCategoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				9B7B51971A48428D0027FDAC /* AppDelegate.swift */,
 				9B7B519C1A48428D0027FDAC /* ViewController.swift */,
 				9B7B519E1A48428D0027FDAC /* Main.storyboard */,
+				9B8D81451A4AF0FD00B58F53 /* MinorCategoryTableViewCell.swift */,
 				9B7B51BC1A48527D0027FDAC /* FoldTableViewController.swift */,
 				9B7B51BE1A4992710027FDAC /* PrimeCategoryTableViewCell.swift */,
 				9B7B51A11A48428D0027FDAC /* Images.xcassets */,
@@ -225,6 +228,7 @@
 				9B7B51BD1A48527D0027FDAC /* FoldTableViewController.swift in Sources */,
 				9B7B519D1A48428D0027FDAC /* ViewController.swift in Sources */,
 				9B7B519B1A48428D0027FDAC /* UITableViewDemo.xcdatamodeld in Sources */,
+				9B8D81461A4AF0FD00B58F53 /* MinorCategoryTableViewCell.swift in Sources */,
 				9B7B51981A48428D0027FDAC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +421,7 @@
 				9B7B51B61A48428D0027FDAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B7B51B71A48428D0027FDAC /* Build configuration list for PBXNativeTarget "UITableViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				9B7B51B91A48428D0027FDAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

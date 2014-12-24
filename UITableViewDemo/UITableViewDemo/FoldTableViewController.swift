@@ -13,9 +13,19 @@ class FoldTableViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableHeaderView: UIView!
     
+    let categoryNameLabelList = ["父01", "父02", "父03"]
+    let categoryNameLabelSonList = ["子01", "子02", "子03"]
+    
+    var singleCellDic: Dictionary<String, String>! = ["cellType": "Main", "isAttached": "false"]
+    var tableViewCells: Array<Dictionary<String, String>>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
+        
+        tableViewCells.append(self.singleCellDic)
+        tableViewCells.append(self.singleCellDic)
+        tableViewCells.append(self.singleCellDic)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,20 +33,30 @@ class FoldTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     func setTableView() {
-        self.tableView.registerClass(PrimeCategoryTableViewCell.self, forCellReuseIdentifier: "PrimeCategoryTableViewCell")
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
     
     // MARK: - UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return tableViewCells.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("PrimeCategoryTableViewCell") as PrimeCategoryTableViewCell
         
-        return cell
+        if self.tableViewCells[indexPath.row]["cellType"] == "Main" {
+            let cell = tableView.dequeueReusableCellWithIdentifier("PrimeCategoryTableViewCell", forIndexPath: indexPath) as PrimeCategoryTableViewCell
+            //cell.categoryNameLabel.text = categoryNameLabelList[indexPath.row]
+            cell.categoryNameLabel.text = "父cell"
+            
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("MinorCategoryTableViewCell", forIndexPath: indexPath) as MinorCategoryTableViewCell
+            //cell.categoryNameLabel.text = categoryNameLabelSonList[indexPath.row]
+            cell.categoryNameLabel.text = "子cell"
+            return cell
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -50,6 +70,26 @@ class FoldTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("点击了section: \(indexPath.section)")
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        var path: NSIndexPath!
+        if self.tableViewCells[indexPath.row]["cellType"] == "Main" {
+            path = NSIndexPath(forRow: indexPath.row + 1, inSection: indexPath.section)
+        }
+        else {
+            path =  indexPath
+        }
+        
+        // 如果选中的cell类型
+        if self.tableViewCells[indexPath.row]["cellType"] == "Main" {
+            //判断是否已经展开，是则收起，否则展开
+            if self.tableViewCells[indexPath.row]["isAttached"] == "true" {
+                // 收起
+            }
+            else {
+                // 展开
+            }
+        }
+        
     }
 }
